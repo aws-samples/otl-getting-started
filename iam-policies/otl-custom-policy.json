@@ -1,0 +1,109 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+       {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:GetRole",
+                "iam:ListInstanceProfilesForRole",
+                "iam:GetInstanceProfile",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListInstanceProfiles",
+                "iam:ListRoles"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:role/*",
+                "arn:aws:iam::${data.aws_caller_identity.current.account_id}:instance-profile/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": [
+            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/NodeInstanceRole",
+            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/rds-monitoring-role",
+            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/eksClusterRole"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "application-autoscaling:*",
+                "rds:*",
+                "logs:*",
+                "ssmmessages:*",
+                "autoscaling:*",
+                "appmesh:*",
+                "servicediscovery:*",
+                "secretsmanager:*",
+                "outposts:ListSites",
+                "kms:*",
+                "codedeploy:*",
+                "ec2messages:*",
+                "events:*",
+                "sns:*",
+                "outposts:GetOutpost",
+                "outposts:GetOutpostInstanceTypes",
+                "iam:ListRoles",
+                "cloudformation:*",
+                "elasticloadbalancing:*",
+                "iam:CreateServiceLinkedRole",
+                "outposts:ListOutposts",
+                "cloudwatch:*",
+                "ssm:*",
+                "ecs:*",
+                "ec2:*",
+                "elasticmapreduce:*",
+                "eks:*",
+                "sqs:*",
+                "redshift:*",
+                "redshift-data:*",
+                "tag:*",
+                "aws-marketplace:*",
+                "route53:*",
+                "ram:*",
+                "compute-optimizer:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": "elasticmapreduce:*",
+            "Resource": [
+                "arn:aws:elasticmapreduce:*:*:cluster/*",
+                "arn:aws:elasticmapreduce:*:*:editor/*"
+            ]
+        },
+        {
+            "Action": "iam:CreateServiceLinkedRole",
+            "Effect": "Allow",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "iam:AWSServiceName": [
+                        "rds.amazonaws.com",
+                        "rds.application-autoscaling.amazonaws.com",
+                        "redshift.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor5",
+            "Effect": "Deny",
+            "Action": [
+                "kms:encrypt",
+                "kms:decrypt"
+            ],
+            "Resource": [
+                "${data.aws_kms_key.ebs.arn}",
+                "${data.aws_kms_key.ebs.arn}"
+            ]
+        }
+    ]
+}
