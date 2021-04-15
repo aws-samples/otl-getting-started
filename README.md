@@ -14,7 +14,6 @@ Contents
 	* [Local Gateway Configuration](#local-gateway-configuration)
 	* [Terraform Module Library](#terraform-module-library)
 * [FAQ](#faq)
-* [Hello Rohan](#hello-rohan)
 
 # What is the Outposts Test Lab?
 
@@ -90,5 +89,3 @@ Several Terraform Modules have been written for OTL and can be accessed here: ht
     - During onboarding, you will be given access to a virtual meeting room hosted by [Amazon Chime](https://app.chime.aws).
 - Why do you need my account number?
     - During onboarding, we will grant [sts:AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) access to this account so that you can access the Outposts Test Lab.
-
-# Hello Rohan

@@ -125,8 +125,6 @@ items = ["I stumbled on this page by accident, but the Lab sounds interesting! H
         ]
 mdFile.new_list(items)
 
-mdFile.new_header(level=1, title="Hello Rohan")
-
 # Create a table of contents
 mdFile.new_table_of_contents(table_title='Contents', depth=2)
 mdFile.create_md_file()
