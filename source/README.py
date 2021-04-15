@@ -106,7 +106,7 @@ mdFile.new_list(items)
 
 mdFile.new_header(level=2, title="Terraform Module Library")
 
-mdFile.new_paragraph("Several Terraform Modules have been written for OTL and can be accessed here: https://github.com/Outposts-Test-Lab/otl-service-launcher")
+mdFile.new_paragraph("Several Terraform Modules have been written for OTL and can be accessed here: https://github.com/aws-samples/otl-service-launcher/")
 
 mdFile.new_header(level=1, title="FAQ")
 
