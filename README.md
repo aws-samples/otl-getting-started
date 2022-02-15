@@ -21,9 +21,9 @@ Outposts Test Labs (OTL) is a program that enables AWS customers and partners to
 
 ## Participation Criteria
 
-- Applications must be validated in an AWS region today
-- Participants are responsible for providing a test plan with success criteria prior to testing
-- No production data, or other sensitive data, is used during testing
+- Applications must be pre-validated in an AWS region.
+- Participants are responsible for providing a test plan with success criteria prior to testing.
+- No production data, or other sensitive data, is used during testing.
 
 This guide describes how to set up account and networking access for testing. Your participation in this program is governed by your Agreement with AWS and the AWS Service Terms. In particular, please note that your participation in this preview is subject to the Universal and Beta Service Participation of the AWS Service Terms and is confidential. Please do not discuss the features, functionality, or documentation related to this feature with any parties (individuals or businesses) that are not authorized by Amazon Web Services.
 
@@ -31,8 +31,6 @@ This guide describes how to set up account and networking access for testing. Yo
 - Please do not post questions and comments to the general AWS forums as this program is not publicly released. You can send your questions and feedback to your AWS representative.
 
 # Getting Started
-
-Before your team is granted access to Outposts capacity, we will need to capture account and networking information.
 
 ## Pre-Onboarding
 
@@ -47,9 +45,8 @@ Before your team is granted access to Outposts capacity, we will need to capture
 
 ### Outposts Documentation
 
-Outposts documentation is available here: https://docs.aws.amazon.com/outposts/
-
-How to launch an EC2 instance on an Outpost: https://docs.aws.amazon.com/outposts/latest/userguide/launch-instance.html
+- Outposts documentation is available here: https://docs.aws.amazon.com/outposts/
+- How to launch an EC2 instance on an Outpost: https://docs.aws.amazon.com/outposts/latest/userguide/launch-instance.html
 
 # Resources
 
